@@ -71,3 +71,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "mrsk", "~> 0.13.2"
