@@ -10,4 +10,4 @@ env:
   secret:
     - RAILS_MASTER_KEY
 healthcheck:
-  max_attempts: 20
+  max_attempts: 10
