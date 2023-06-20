@@ -1,13 +1,35 @@
 service: ship
 image: jeromedalbert/ship
+
 servers:
+  web:
   - 143.198.234.99
+
 registry:
   username: jeromedalbert
   password:
     - MRSK_REGISTRY_PASSWORD
+
 env:
+  clear:
+    DB_HOST: 143.198.234.99
   secret:
     - RAILS_MASTER_KEY
+    - POSTGRES_PASSWORD
+
+accessories:
+  db:
+    image: postgres:15
+    host: 143.198.234.99
+    port: 5432
+    env:
+      clear:
+        POSTGRES_USER: ship
+        POSTGRES_DB: ship_production
+      secret:
+        - POSTGRES_PASSWORD
+    directories:
+      - data:/var/lib/postgresql/data
+
 healthcheck:
   max_attempts: 10
