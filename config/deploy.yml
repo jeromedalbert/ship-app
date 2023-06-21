@@ -11,9 +11,6 @@ registry:
     - MRSK_REGISTRY_PASSWORD
 
 env:
-  clear:
-    DB_HOST: <%= ENV['SERVER_IP'] %>
-    WEB_CONCURRENCY: 0
   secret:
     - RAILS_MASTER_KEY
     - POSTGRES_PASSWORD
