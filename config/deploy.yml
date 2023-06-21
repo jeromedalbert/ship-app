@@ -3,7 +3,7 @@ image: jeromedalbert/ship
 
 servers:
   web:
-  - 147.182.206.64
+  - <%= ENV['SERVER_IP'] %>
 
 registry:
   username: jeromedalbert
@@ -12,7 +12,7 @@ registry:
 
 env:
   clear:
-    DB_HOST: 147.182.206.64
+    DB_HOST: <%= ENV['SERVER_IP'] %>
     WEB_CONCURRENCY: 0
   secret:
     - RAILS_MASTER_KEY
@@ -21,7 +21,7 @@ env:
 accessories:
   db:
     image: postgres:15
-    host: 147.182.206.64
+    host: <%= ENV['SERVER_IP'] %>
     port: 5432
     env:
       clear:
