@@ -3,7 +3,7 @@ image: jeromedalbert/ship
 
 servers:
   web:
-  - 143.198.234.99
+  - 147.182.206.64
 
 registry:
   username: jeromedalbert
@@ -12,7 +12,7 @@ registry:
 
 env:
   clear:
-    DB_HOST: 143.198.234.99
+    DB_HOST: 147.182.206.64
     WEB_CONCURRENCY: 0
   secret:
     - RAILS_MASTER_KEY
@@ -21,7 +21,7 @@ env:
 accessories:
   db:
     image: postgres:15
-    host: 143.198.234.99
+    host: 147.182.206.64
     port: 5432
     env:
       clear:
