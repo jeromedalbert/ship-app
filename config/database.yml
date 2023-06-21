@@ -13,7 +13,7 @@ ship:
 
 production:
   <<: *default
-  host: <%= ENV["SERVER_IP"] %>
+  host: <%= ENV["DB_HOST"] %>
   database: ship_production
   username: ship
   password: <%= ENV["POSTGRES_PASSWORD"] %>
